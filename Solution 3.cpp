@@ -1,22 +1,39 @@
-#include <string>
 #include <iostream>
 int main()
 {
-	std::string name;
-	double x1;
-	double x2;
-	double y1;
-	double y2;
-	std::cout << "Enter your name: ";
-	std::getline(std::cin, name);
-	std::cout << "x1 = ";
-	std::cin >> x1;
-	std::cout << "x2 = ";
-	std::cin >> x2;
-	std::cout << "y1 = ";
-	std::cin >> y1;
-	std::cout << "y2 = ";
-	std::cin >> y2;
-	std::cout << name << ", the midpoint of the line segment is (" << (x1 + x2) / 2 << ", " << (y1 + y2) / 2 << ")." << std::endl;
+	double grade;
+	std::cout << "Please enter the grade (0 to 100): \n";
+	std::cin >> grade;
+	if (grade < 60 && grade >= 0)
+	{
+		std::cout << "The grade is F";
+	}
+	else if (grade < 70 && grade >= 60)
+	{
+		std::cout << "The grade is D";
+	}
+	else if (grade < 80 && grade >= 70)
+	{
+		std::cout << "The grade is C";
+	}
+	else if (grade < 90 && grade >=80)
+	{
+		std::cout << "The grade is B";
+	}
+	else if (grade <= 100 && grade >= 90)
+	{
+		std::cout << "The grade is A";
+	}
+	else
+	{
+		if (grade < 0)
+		{
+			std::cout << "A negative grade should be impossible; although you tend to surprise me.";
+		}
+		else
+		{
+			std::cout << "I never awarded bonus points cheater.";
+		}
+	}
 	return 0;
 }

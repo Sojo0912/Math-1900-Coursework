@@ -1,16 +1,20 @@
-#include <string>
 #include <iostream>
-int main()
+int main() 
 {
-	std::string question_1;
-	std::string answer_1;
-	std::cout << "Enter your Question: ";
-	std::getline(std::cin,question_1);;
-	std::cout << "\nEnter your Answer: ";
-	std::getline(std::cin, answer_1);
-	std::cout << "\nYour Question: " << question_1 << "\n";
-	std::cout << "\nPress Enter to Reveal your Answer: ";
-	std::cin.get();
-	std::cout << "\nYour Answer: " << answer_1;
-	return 0;
+double mresistance;
+double rresistance;
+std::cout << "Please enter the measured resistance: ";
+std::cin >> mresistance;
+std::cout << "Please enter the rated resistance: ";
+std::cin >> rresistance;
+bool inrange = (mresistance >= 0.95 * rresistance && mresistance <= 1.05 * rresistance);
+if (inrange)
+{ 
+	std::cout << "The measured resistance is within 5% of the rated resistance";
+}
+else
+{
+	std::cout << "The measured resistance is not within 5% of the rated resistance";
+}
+return 0;
 }
