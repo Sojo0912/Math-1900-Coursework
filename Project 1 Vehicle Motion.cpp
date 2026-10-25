@@ -35,7 +35,7 @@ int main()
 		std::cout << "Average Speed for checkpoint " << count_two + 1 << ": " << distance[count_two] / time[count_two] << "\n";
 		count_two++;
 	}
-	while (count_three < checkpoint_count)
+	while (count_three < checkpoint_count)//This loop adds the individual distances and times recursively before calcuating the average speed in the very next block of code.
 	{
 		total_time = total_time + time[count_three];
 		total_distance = total_distance + distance[count_three];
