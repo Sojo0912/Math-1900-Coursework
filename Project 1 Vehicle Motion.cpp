@@ -41,6 +41,8 @@ int main()
 		total_distance = total_distance + distance[count_three];
 		count_three++;
 	}
+	std::cout << "The total distance traveled was: " << total_distance << "\n";
+	std::cout << "The total time taken was: " << total_time << "\n";
 	std::cout << "The average speed across the trip was: " << total_distance / total_time << "\n";
 	return 0;
 }
