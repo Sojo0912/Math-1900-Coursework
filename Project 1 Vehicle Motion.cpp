@@ -9,7 +9,6 @@ int main()
 	int checkpoint_count = 0;
 	int count_one = 0;
 	int count_two = 0;
-	int count_three = 0;
 	double total_distance = 0;
 	double total_time = 0;
 	std::string checkpoint;
@@ -30,16 +29,12 @@ int main()
 		std::cin >> distance[count_one] >> time[count_one];//The user inputs the distance and time for each checkpoint, which is stored in the vector arrays.
 		count_one++;
 	}
-	while (count_two < checkpoint_count)
+	while (count_two < checkpoint_count)//This loop calculates the average speed for each checkpoint and the total distance and time. Operate on the same counter.
 	{
 		std::cout << "Average Speed for checkpoint " << count_two + 1 << ": " << distance[count_two] / time[count_two] << "\n";
+		total_time = total_time + time[count_two];
+		total_distance = total_distance + distance[count_two];
 		count_two++;
-	}
-	while (count_three < checkpoint_count)//This loop adds the individual distances and times recursively before calcuating the average speed in the very next block of code.
-	{
-		total_time = total_time + time[count_three];
-		total_distance = total_distance + distance[count_three];
-		count_three++;
 	}
 	std::cout << "The total distance traveled was: " << total_distance << "\n";
 	std::cout << "The total time taken was: " << total_time << "\n";
