@@ -2,7 +2,7 @@
 const double pi = 3.14159;
 double radius;
 double height;
-double volume(int r, int h)
+double volume(double r, double h)
 {
 	return pi * r * r * h;
 }
